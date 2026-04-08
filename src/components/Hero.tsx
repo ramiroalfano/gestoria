@@ -15,8 +15,8 @@ export default function Hero() {
           className="object-cover object-center opacity-40" 
           priority 
         />
-        {/* Capa blanca semitransparente para legibilidad elegante */}
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
+        {/* Capa con gradiente para legibilidad elegante */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/30 to-transparent backdrop-blur-[1px]"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
