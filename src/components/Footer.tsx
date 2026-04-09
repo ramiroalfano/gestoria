@@ -17,7 +17,7 @@ export default function Footer() {
         >
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <Image src="/logo-estudio.png" alt="Estudio Integral" width={32} height={32} />
+              <Image src="/logo-estudio-2.png" alt="Estudio Integral" width={50} height={50} />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Somos personas que brindan servicios de manera profesional y personalizada. Tomando con seriedad cada situación que se nos presenta siendo prolijos en nuestra labor.

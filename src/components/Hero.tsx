@@ -26,7 +26,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <div className="flex justify-center mb-6">
-            <Image src="/logo-estudio.png" alt="Estudio Integral" width={80} height={80} />
+            <Image src="/logo-estudio-2.png" alt="Estudio Integral" width={150} height={150} />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Asesoramiento profesional <br />

@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-            <Image src="/logo-estudio.png" alt="Estudio Integral" width={40} height={40} />
+            <Image src="/logo-estudio-2.png" alt="Estudio Integral" width={50} height={50} />
           </div>
 
           <div className="hidden md:block">
