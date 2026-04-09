@@ -42,18 +42,18 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="flex justify-center gap-4"
+            className="flex flex-wrap justify-center gap-4 mt-8"
           >
             <a
               href="#contacto"
-              className="group flex items-center gap-2 bg-primary hover:bg-violet-500 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(167,139,250,0.4)] hover:shadow-[0_0_30px_rgba(167,139,250,0.6)]"
+              className="group flex items-center gap-2 bg-primary hover:bg-violet-500 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(167,139,250,0.4)] hover:shadow-[0_0_30px_rgba(167,139,250,0.6)] whitespace-nowrap"
             >
               Consulta Gratuita
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#servicios"
-              className="flex items-center gap-2 bg-transparent border border-gray-400 hover:border-primary text-gray-700 font-bold py-4 px-8 rounded-full transition-all duration-300 hover:text-primary"
+              className="flex items-center gap-2 bg-transparent border border-gray-400 hover:border-primary text-gray-700 font-bold py-4 px-8 rounded-full transition-all duration-300 hover:text-primary whitespace-nowrap"
             >
               Nuestros Servicios
             </a>
