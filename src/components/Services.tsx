@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Scale, Briefcase, Calculator, FileText, Car, Shield } from "lucide-react";
+import Image from "next/image";
 
 export default function Services() {
   const services = [
@@ -9,25 +10,29 @@ export default function Services() {
       title: "Asesoramiento General",
       description: "Asesoramiento contable, impositivo y atención personalizada.",
       icon: <Briefcase className="w-12 h-12 text-primary group-hover:text-white transition-colors duration-300" />,
-      category: "Contable"
+      category: "Contable",
+      image: "/images/servicio-contable.jpg"
     },
     {
       title: "Liquidación de Impuestos",
       description: "Auditoría, liquidación de impuestos y reducción de infracciones.",
       icon: <Calculator className="w-12 h-12 text-primary group-hover:text-white transition-colors duration-300" />,
-      category: "Impositivo"
+      category: "Impositivo",
+      image: "/images/servicio-impuestos.jpg"
     },
     {
       title: "Seguros",
       description: "Asesoramiento integral y cobertura de seguros adaptada a tus necesidades.",
       icon: <Shield className="w-12 h-12 text-primary group-hover:text-white transition-colors duration-300" />,
-      category: "Seguros"
+      category: "Seguros",
+      image: "/images/servicio-seguros.jpg"
     },
     {
       title: "Trámites del Automotor",
       description: "Gestión completa de trámites automotores de forma ágil y profesional.",
       icon: <Car className="w-12 h-12 text-primary group-hover:text-white transition-colors duration-300" />,
-      category: "Automotor"
+      category: "Automotor",
+      image: "/images/servicio-automotor.jpg"
     }
   ];
 
@@ -47,7 +52,7 @@ export default function Services() {
   };
 
   return (
-    <section id="servicios" className="pt-24 pb-32 bg-gray-50 relative z-10">
+    <section id="servicios" className="pt-24 pb-40 bg-gray-50 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -63,24 +68,44 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="max-w-5xl mx-auto space-y-8"
         >
           {services.map((service, index) => (
             <motion.div
               key={index}
               variants={cardVariants}
-              className="group bg-white text-center p-8 rounded-2xl border border-gray-100 hover:bg-primary transition-all duration-300 flex flex-col items-center justify-center transform hover:-translate-y-2 cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(167,139,250,0.3)]"
+              className="group bg-white rounded-2xl border border-gray-100 hover:border-primary/30 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_30px_rgba(167,139,250,0.3)] overflow-hidden"
             >
-              <div className="mb-6 p-4 rounded-full bg-gray-50 border border-gray-100 group-hover:border-white/30 group-hover:bg-primary-light/20">
-                {service.icon}
+              <div className="grid md:grid-cols-2 gap-0">
+                {/* Image Section */}
+                <div className="relative h-64 md:h-auto overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent group-hover:from-primary/30 transition-colors duration-300"></div>
+                </div>
+                
+                {/* Content Section */}
+                <div className="p-8 md:p-12 flex flex-col justify-center">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      {service.icon}
+                    </div>
+                    <span className="uppercase text-xs font-bold tracking-wider text-gray-400 group-hover:text-primary transition-colors">
+                      {service.category}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 group-hover:text-primary mb-4 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-lg leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               </div>
-              <span className="mb-2 uppercase text-xs font-bold tracking-wider text-gray-400 group-hover:text-white/80">
-                {service.category}
-              </span>
-              <h3 className="text-xl font-bold text-gray-900 group-hover:text-white mb-4">{service.title}</h3>
-              <p className="text-gray-500 group-hover:text-white/90">
-                {service.description}
-              </p>
             </motion.div>
           ))}
         </motion.div>
