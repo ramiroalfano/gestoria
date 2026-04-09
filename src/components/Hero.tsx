@@ -34,7 +34,7 @@ export default function Hero() {
               para tu futuro.
             </span>
           </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-600 mb-10">
+          <p className="mt-4 max-w-2xl mx-auto text-xl mb-10" style={{ color: '#111113' }}>
             Somos personas que brindan servicios de manera profesional y personalizada. Asesoramiento sin cargo y reducción de infracciones.
           </p>
 
