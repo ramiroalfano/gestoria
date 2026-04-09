@@ -16,7 +16,7 @@ export default function Hero() {
           priority 
         />
         {/* Sombreado sutil para legibilidad del texto */}
-        <div className="absolute inset-0 bg-black/15"></div>
+        <div className="absolute inset-0 bg-white/15"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
