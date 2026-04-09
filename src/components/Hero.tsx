@@ -25,6 +25,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
+          <div className="flex justify-center mb-6">
+            <Image src="/logo-estudio.png" alt="Estudio Integral" width={80} height={80} />
+          </div>
           <span className="text-primary uppercase tracking-[0.2em] text-sm font-bold mb-6 block">
             Estudio Integral
           </span>

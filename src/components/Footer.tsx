@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Scale, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -15,8 +16,8 @@ export default function Footer() {
           className="grid grid-cols-1 md:grid-cols-4 gap-8"
         >
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <Scale className="text-primary h-6 w-6" />
+            <div className="flex items-center gap-3 mb-4">
+              <Image src="/logo-estudio.png" alt="Estudio Integral" width={32} height={32} />
               <span className="text-white font-bold text-lg tracking-wider">
                 ESTUDIO <span className="text-primary">INTEGRAL</span>
               </span>
