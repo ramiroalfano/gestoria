@@ -8,15 +8,15 @@ export default function Hero() {
   return (
     <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 z-0">
-        <Image 
-          src="/hero-bg.png" 
-          alt="Oficina moderna, elementos legales y contables" 
-          fill 
-          className="object-cover object-center opacity-40" 
-          priority 
+        <Image
+          src="/hero-bg.png"
+          alt="Oficina moderna, elementos legales y contables"
+          fill
+          className="object-cover object-center"
+          priority
         />
-        {/* Capa blanca semitransparente para legibilidad elegante */}
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
+        {/* Sombreado sutil para legibilidad del texto */}
+        <div className="absolute inset-0 bg-white/30"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
@@ -25,9 +25,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="text-primary uppercase tracking-[0.2em] text-sm font-bold mb-6 block">
-            Estudio Integral
-          </span>
+          <div className="flex justify-center mb-6">
+            <Image src="/logo-estudio-2.png" alt="Estudio Integral" width={150} height={150} />
+          </div>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Asesoramiento profesional <br />
             <span className="text-primary">

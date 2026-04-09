@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Scale, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -15,11 +16,8 @@ export default function Footer() {
           className="grid grid-cols-1 md:grid-cols-4 gap-8"
         >
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <Scale className="text-primary h-6 w-6" />
-              <span className="text-white font-bold text-lg tracking-wider">
-                ESTUDIO <span className="text-primary">INTEGRAL</span>
-              </span>
+            <div className="flex items-center gap-3 mb-4">
+              <Image src="/logo-estudio-2.png" alt="Estudio Integral" width={50} height={50} />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Somos personas que brindan servicios de manera profesional y personalizada. Tomando con seriedad cada situación que se nos presenta siendo prolijos en nuestra labor.
