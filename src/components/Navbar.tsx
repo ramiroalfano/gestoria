@@ -20,9 +20,6 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
             <Image src="/logo-estudio.png" alt="Estudio Integral" width={40} height={40} />
-            <span className="text-gray-900 font-bold text-xl tracking-wider">
-              ESTUDIO <span className="text-primary">INTEGRAL</span>
-            </span>
           </div>
 
           <div className="hidden md:block">
