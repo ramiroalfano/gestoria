@@ -12,11 +12,9 @@ export default function Hero() {
           src="/hero-bg.png" 
           alt="Oficina moderna, elementos legales y contables" 
           fill 
-          className="object-cover object-center opacity-40" 
+          className="object-cover object-center" 
           priority 
         />
-        {/* Capa blanca semitransparente para legibilidad elegante */}
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
